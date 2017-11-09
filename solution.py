@@ -1,13 +1,13 @@
-assignments = []
+from utils import *
 
-def assign_value(values, square, value):
+def assign_value(values, squares, value):
     """
     Please use this function to update your values dictionary!
     Assigns a value to a given box. If it updates the board record it.
     """
 
     # Don't waste memory appending actions that don't actually change any values
-    if values[square] == value:
+    if values[squares] == value:
         return values
 
     values[squares] = value
@@ -15,7 +15,7 @@ def assign_value(values, square, value):
         assignments.append(values.copy())
     return values
 
-def naked_twins(values):
+"""def naked_twins(values):
     """Eliminate values using the naked twins strategy.
     Args:
         values(dict): a dictionary of the form {'box_name': '123456789', ...}
@@ -25,7 +25,7 @@ def naked_twins(values):
     """
 
     # Find all instances of naked twins
-    # Eliminate the naked twins as possibilities for their peers
+    # Eliminate the naked twins as possibilities for their peers"""
 
 def cross(A, B):
     "Cross product of elements in A and elements in B."
@@ -128,4 +128,3 @@ if __name__ == '__main__':
         pass
     except:
         print('We could not visualize your board due to a pygame issue. Not a problem! It is not a requirement.')
-
